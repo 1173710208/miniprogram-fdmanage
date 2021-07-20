@@ -1,0 +1,158 @@
+<!--pages/customer/customeredit.wxml-->
+
+<view class="detail_swiper">
+    <image class="image"  bindtap="ChangeImage"
+    mode="aspectFit" src="{{chooseImgs}}"/>
+</view>
+<form bindsubmit='formSubmit'>
+<view class="container">
+    <view class="edit-container">
+            <view class="a-item">
+                <view class="input-wrap">
+                    编号 | 
+                </view>
+                <view class="input-wrap2">
+                    {{goodsObj.id}}
+                </view>
+            </view>
+            <view class="a-item">
+                <view class="input-wrap">
+                    书名 | 
+                </view>
+                <view class="input-wrap2">
+                    <input 
+                    name="title"
+                    cursor-spacing='80' 
+                    class='a-input' 
+                    placeholder='{{goodsObj.title}}'>
+                    </input>                    
+                </view>
+            </view>
+             <view class="a-item">
+                <view class="input-wrap">
+                    作者 | 
+                </view>
+                <view class="input-wrap2">
+                    <input 
+                    name="author"
+                    cursor-spacing='80' 
+                    class='a-input' 
+                    placeholder='{{goodsObj.author}}'>
+                    </input>                    
+                </view>
+            </view>    
+            <view class="a-item">
+                <view class="input-wrap">
+                    出版社 | 
+                </view>
+                <view class="input-wrap2">
+                    <input 
+                    name="publisher"
+                    cursor-spacing='80' 
+                    class='a-input' 
+                    placeholder='{{goodsObj.publisher}}'>
+                    </input>                    
+                </view>
+            </view>          
+            <view class="a-item">
+                <view class="input-wrap">
+                    进价 | 
+                </view>
+                <view class="input-wrap2">
+                    <input 
+                    name="pricein"
+                    cursor-spacing='80' 
+                    class='a-input' 
+                    placeholder='{{goodsObj.pricein}}'>
+                    </input>                    
+                </view>
+            </view>          
+            <view class="a-item">
+                <view class="input-wrap">
+                    售价 | 
+                </view>
+                <view class="input-wrap2">
+                    <input 
+                    name="priceout"
+                    cursor-spacing='80' 
+                    class='a-input' 
+                    placeholder='{{goodsObj.priceout}}'>
+                    </input>                    
+                </view>
+            </view>           
+            <view class="a-item">
+                <view class="input-wrap">
+                    库存 | 
+                </view>
+                <view class="input-wrap2">
+                    <input 
+                    name="stock"
+                    cursor-spacing='80' 
+                    class='a-input' 
+                    placeholder='{{goodsObj.stock}}'>
+                    </input>                    
+                </view>
+            </view>    
+            <view class="a-item">
+                <view class="input-wrap">
+                    ISBN | 
+                </view>
+                <view class="input-wrap2">
+                    <input 
+                    name="isbn"
+                    cursor-spacing='80' 
+                    class='a-input' 
+                    placeholder='{{goodsObj.isbn}}'>
+                    </input>                    
+                </view>
+            </view>    
+            <view class="a-item">
+                <view class="input-wrap">
+                    简介 | 
+                </view>
+                <view class="input-wrap2">
+                    <input 
+                    name="summary"
+                    cursor-spacing='80' 
+                    class='a-input' 
+                    placeholder='{{goodsObj.summary}}'>
+                    </input>                    
+                </view>
+            </view>    
+            <view class="a-item">
+                <view class="input-wrap">
+                    类别 | 
+                </view>
+                <view class="input-wrap2">
+                    <picker class="input-wrap2" mode="selector" value="{{plan}}" range="{{planrange}}" bindchange="bindplanChange">   
+                        <view wx:if="{{!chooseplan}}">                    
+                        <view class="input-wrap2"wx:if="{{goodsObj.cate==1}}">
+                            小说
+                        </view>
+                        <view class="input-wrap2"wx:if="{{goodsObj.cate==2}}">
+                            散文
+                        </view>
+                        <view class="input-wrap2"wx:if="{{goodsObj.cate==3}}">
+                            诗歌
+                        </view>
+                        <view class="input-wrap2"wx:if="{{goodsObj.cate==4}}">
+                            说明文
+                        </view>
+                        <view class="input-wrap2"wx:if="{{goodsObj.cate==5}}">
+                            悬疑
+                        </view>
+                        </view>
+                        <view wx:else> {{plan}}</view> 
+                    </picker>                  
+                </view>
+            </view>         
+    </view>
+    <view class="btn-wrap">
+            <view class="btn">
+                提交
+            </view>
+            <button form-type='submit'>   
+            </button>
+    </view>
+</view>
+</form>

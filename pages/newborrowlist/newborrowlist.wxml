@@ -1,0 +1,36 @@
+<scroll-view class="container" style="height: 100%;">
+
+
+    <view class="no-search" >   
+        <view class="goods-box">
+           <view class="name">订单编号</view>
+                <view class="name">下单日期</view>
+                <view class="name">下单顾客</view> 
+                <view class="name">订单状态</view> 
+                <view class="name">操作</view> 
+        </view>      
+        <view class="line"></view>       
+            <view class="goods-box" 
+            wx:for="{{goodsList}}" 
+            wx:for-index="iindex" 
+            wx:for-item="iitem" 
+            wx:key="id">
+                <view class="name">{{iitem.id}}</view>
+                <view class="name">{{iitem.date}}</view>
+                <view class="name">{{iitem.customer}}</view>
+                <view class="name">
+                    <view wx:if="{{iitem.state==1}}">
+                        已接单  
+                    </view>
+                    <view wx:if="{{iitem.state==0}}">
+                        未接单
+                    </view>
+                </view>
+                <navigator class="edit" url="/pages/newborrowlist/newborrowlistdetail?borrowlist_id={{iitem.id}}">点击接单</navigator>
+            </view>
+        <view class='no-more' wx:if="{{!goodsList.length==0 || !searchStatus}}">没有更多了</view>   
+    </view>
+    
+    
+</scroll-view>
+

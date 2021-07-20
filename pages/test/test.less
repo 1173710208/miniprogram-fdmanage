@@ -1,0 +1,86 @@
+/* pages/customer/customerdetail.wxss */
+page {
+    min-height: 100%;
+    background-color: #f8f8f8;
+}
+
+.container {
+    min-height: 100%;
+    /* align-items: stretch; */
+    background: #f8f8f8;
+    overflow-x: hidden;
+    padding: 30rpx;
+
+    .edit-container {
+        background: #fff;
+        width: 100%;
+        margin-bottom: 30rpx;
+        border-radius: 10rpx;
+        box-shadow: 2rpx 8rpx 18rpx #f1f1f1;
+
+        .title {
+            padding-left: 30rpx;
+            height: 6vh;
+            font-size: 32rpx;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-bottom: 1px solid #f1f1f1;
+        }
+
+        .time {
+            padding-left: 30rpx;
+            height: 8vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 44rpx;
+        }
+        .food-container {
+            display: flex;
+            flex-direction: column;
+
+            .fooditem-container {
+                display: flex;
+                flex-direction: row;
+
+                .name {
+                    flex: 1;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-right: 1px solid #f1f1f1;                    
+                    border-bottom: 1px solid #f1f1f1;
+                }
+
+                .material-box {
+
+                    display: flex;
+                    flex-direction: column;
+                    flex: 1;
+                    border-right: 1px solid #f1f1f1;  
+                    .material{
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        border-bottom: 1px solid #f1f1f1;
+                    }
+                }
+
+                .num-box {
+
+                    display: flex;
+                    flex-direction: column;
+                    flex: 1;
+                    .num{
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        border-bottom: 1px solid #f1f1f1;
+                    }
+                }
+
+            }
+        }
+    }
+}

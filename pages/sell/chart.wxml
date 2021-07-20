@@ -1,0 +1,45 @@
+<!--pages/sell/chart.wxml-->
+
+<view class="sort-box">
+                <picker class="item" mode="date" value="{{date}}" start="1900-01-01" end="2021-06-10" bindchange="bindstartDateChange">
+                    <view wx:if="{{!choosestartdate}}">
+                      点击选择开始日期
+                    </view>
+                    <view wx:else> {{startdate}}</view>
+                </picker>
+                <view class="item {{currentSortType == 'id' ? 'active' : ''}}" bindtap="openSortFilter" id="idSort">
+                    <view class="txt">至</view>                    
+                </view>
+                <picker class="item" mode="date" value="{{date}}" start="1900-01-01" end="2021-06-10" bindchange="bindendDateChange">
+                    <view wx:if="{{!chooseenddate}}">
+                      点击选择结束日期
+                    </view>
+                    <view wx:else> {{enddate}}</view>
+                </picker>
+</view>
+<view class="sort-box2">
+                <view class="item {{chartname == 'lr' ? 'active' : ''}}" bindtap="changechart" id="lr">
+                    <view class="txt">利润</view>
+                </view>
+                <view class="item {{chartname == 'xse' ? 'active' : ''}}" bindtap="changechart" id="xse">
+                    <view class="txt">销售额</view>
+                </view>
+                <view class="item {{chartname == 'xscb' ? 'active' : ''}}" bindtap="changechart" id="xscb">
+                    <view class="txt">销售成本</view>
+                </view>
+                <view class="item {{chartname == 'qtsr' ? 'active' : ''}}" bindtap="changechart" id="qtsr">
+                    <view class="txt">其他收入</view>
+                </view>
+                <view class="item {{chartname == 'qtzc' ? 'active' : ''}}" bindtap="changechart" id="qtzc">
+                    <view class="txt">其他支出</view>
+                </view>
+</view>
+<view class="container">
+    <view class="chart"></view>
+    <view class="btn-wrap">
+            <view class="btn1" bindtap="searchstatus">
+            查询
+            </view>
+    </view>
+</view>
+<canvas canvas-id="lineCanvas" disable-scroll="true" class="canvas"  bindtouchstart="touchcanvas"></canvas>

@@ -1,0 +1,68 @@
+<!--pages/sell/status.wxml-->
+<view class="sort-box">
+                <picker class="item" mode="date" value="{{date}}" start="1900-01-01" end="2021-06-10" bindchange="bindstartDateChange">
+                    <view wx:if="{{!choosestartdate}}">
+                      点击选择开始日期
+                    </view>
+                    <view wx:else> {{startdate}}</view>
+                </picker>
+                <view class="item {{currentSortType == 'id' ? 'active' : ''}}" bindtap="openSortFilter" id="idSort">
+                    <view class="txt">至</view>                    
+                </view>
+                <picker class="item" mode="date" value="{{date}}" start="1900-01-01" end="2021-06-10" bindchange="bindendDateChange">
+                    <view wx:if="{{!chooseenddate}}">
+                      点击选择结束日期
+                    </view>
+                    <view wx:else> {{enddate}}</view>
+                </picker>
+</view>
+<view class="container">
+    <view class="edit-container">          
+            <view class="a-item">
+                <view class="input-wrap">
+                    利润 | 
+                </view>
+                <view class="input-wrap2" wx:if="{{search}}">
+                    {{lr}}
+                </view>
+            </view>      
+            <view class="a-item">
+                <view class="input-wrap">
+                    销售额 | 
+                </view>
+                <view class="input-wrap2"wx:if="{{search}}">
+                    {{xse}}
+                </view>
+            </view>
+            <view class="a-item">
+                <view class="input-wrap">
+                    销售成本 | 
+                </view>
+                <view class="input-wrap2"wx:if="{{search}}">
+                    {{xscb}}
+                </view>
+            </view>           
+            <view class="a-item">
+                <view class="input-wrap">
+                    其他收入 | 
+                </view>
+                <view class="input-wrap2"wx:if="{{search}}">
+                    {{qtsr}}
+                </view>
+            </view>           
+            <view class="a-item">
+                <view class="input-wrap">
+                    其他支出 | 
+                </view>
+                <view class="input-wrap2"wx:if="{{search}}">
+                    {{qtzc}}
+                </view>
+            </view>      
+                    
+    </view>
+    <view class="btn-wrap">
+            <view class="btn1" bindtap="searchstatus">
+            查询
+            </view>
+    </view>
+</view>

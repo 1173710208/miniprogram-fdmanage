@@ -1,0 +1,65 @@
+<view class="container">
+    <view class="edit-container">
+            <view class="a-item">
+                <view class="input-wrap">
+                    编号 | 
+                </view>
+                <view class="input-wrap2">
+                    {{goodsObj.id}}
+                </view>
+            </view>
+            <view class="a-item">
+                <view class="input-wrap">
+                    名称 | 
+                </view>
+                <view class="input-wrap2">
+                    {{goodsObj.name}}
+                </view>
+            </view>           
+            <view class="a-item">
+                <view class="input-wrap">
+                    价格 | 
+                </view>
+                <view class="input-wrap2">
+                    ￥{{goodsObj.price}}
+                </view>
+            </view>           
+            <view class="a-item">
+                <view class="input-wrap">
+                    有效时长 | 
+                </view>
+                <view class="input-wrap2">
+                    {{goodsObj.days}}天
+                </view>
+            </view>           
+            <view class="a-item">
+                <view class="input-wrap">
+                    借阅本书 | 
+                </view>
+                <view class="input-wrap2">
+                    {{goodsObj.nums}}本
+                </view>
+            </view>           
+            <view class="a-item">
+                <view class="input-wrap">
+                    借阅天数 | 
+                </view>
+                <view class="input-wrap2">
+                    {{goodsObj.day}}天
+                </view>
+            </view>           
+    </view>
+    <view class="btn-wrap">
+            <view class="btn1" bindtap="edit">
+            编辑信息
+            </view>
+            </view>
+    <view class="btn-wrap">
+        <view class="btn2" bindtap="delete">
+        删除类别
+        </view>
+    </view>
+</view>
+
+<!-- 修改密码按钮 -->
+

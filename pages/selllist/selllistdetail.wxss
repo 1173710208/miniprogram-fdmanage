@@ -1,0 +1,73 @@
+/* pages/customer/customerdetail.wxss */
+
+page {
+    min-height: 100%;
+    background-color: #f8f8f8;
+}
+
+.container {
+    min-height: 100%;
+    /* align-items: stretch; */
+    background: #f8f8f8;
+    overflow-x: hidden;
+    padding: 30rpx;
+}
+
+.container .edit-container {
+    background: #fff;
+    width: 100%;
+    margin-bottom: 30rpx;
+    border-radius: 10rpx;
+    box-shadow: 2rpx 8rpx 18rpx #f1f1f1;
+}
+
+.container .edit-container .a-item {
+    display: flex;
+    padding-left: 30rpx;
+    height: 5vh;
+    align-items: center;
+}
+
+.container .edit-container .a-item .input-wrap {
+    flex: 1;
+}
+
+.container .edit-container .a-item .input-wrap2 {
+    flex: 3;
+    text-align: left;
+    margin-right: 44rpx;
+    margin-top: 32rpx;
+    margin-bottom: 32rpx;
+    color: #2c2c2c;
+    float: left;
+}
+
+.container .edit-container .line {
+    border-bottom: 1px solid #f1f1f1;
+}
+
+.container .edit-container .b-item {
+    display: flex;
+    flex-direction: row;
+    height: 10vh;
+    border-bottom: 1px solid #f1f1f1;
+}
+
+.container .edit-container .b-item .image {
+    margin-left: 1vw;
+    height: 8vh;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container .edit-container .b-item .name {
+    flex: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28rpx;
+}

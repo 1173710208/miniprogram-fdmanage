@@ -1,0 +1,79 @@
+<view class="detail_swiper">
+    <image class="image"  bindtap="handlePrevewImage"
+    mode="aspectFit" src="{{goodsObj.pic}}"/>
+</view>
+
+<view class="container">
+    <view class="edit-container">
+                        <view class="a-item">
+                <view class="input-wrap">
+                    编号 | 
+                </view>
+                <view class="input-wrap2">
+                    {{goodsObj.id}}
+                </view>
+            </view>
+            <view class="a-item">
+                <view class="input-wrap">
+                    名称 | 
+                </view>
+                <view class="input-wrap2">
+                    {{goodsObj.name}}                 
+                </view>
+            </view>        
+            <view class="a-item">
+                <view class="input-wrap">
+                    进价 | 
+                </view>
+                <view class="input-wrap2">
+                    {{goodsObj.pricein}}                
+                </view>
+            </view>          
+            <view class="a-item">
+                <view class="input-wrap">
+                    售价 | 
+                </view>
+                <view class="input-wrap2">
+                    {{goodsObj.priceout}}               
+                </view>
+            </view>           
+            <view class="a-item">
+                <view class="input-wrap">
+                    库存 | 
+                </view>
+                <view class="input-wrap2">
+                    {{goodsObj.num}}                   
+                </view>
+            </view>    
+            <view class="a-item">
+                <view class="input-wrap">
+                    类别 | 
+                </view>
+                <view class="input-wrap2"wx:if="{{goodsObj.cate==1}}">
+                    文具
+                </view>
+                <view class="input-wrap2"wx:if="{{goodsObj.cate==2}}">
+                    饮料
+                </view>
+                <view class="input-wrap2"wx:if="{{goodsObj.cate==3}}">
+                    小食
+                </view>
+                <view class="input-wrap2"wx:if="{{goodsObj.cate==4}}">
+                    小商品
+                </view>
+            </view>         
+    </view>
+    <view class="btn-wrap">
+            <view class="btn1" bindtap="edit">
+            编辑信息
+            </view>
+            </view>
+    <view class="btn-wrap">
+        <view class="btn2" bindtap="delete">
+        删除类别
+        </view>
+    </view>
+</view>
+
+<!-- 修改密码按钮 -->
+

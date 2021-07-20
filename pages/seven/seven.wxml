@@ -1,0 +1,24 @@
+<!--pages/seven/seven.wxml-->
+<scroll-view class="container" style="height: 100%;">
+    <view class="no-search" >  
+        <view class="goods-box" >
+                <view class="name">头像</view>
+                <view class="name">编号</view>
+                <view class="name">姓名</view>
+                <view class="name">生日</view>
+                <view class="name">详细信息</view>
+            </view>      
+            <view class="goods-box" 
+            wx:for="{{goodsList}}" 
+            wx:for-index="iindex" 
+            wx:for-item="iitem" 
+            wx:key="id">
+                <image mode="aspectFit" src="{{iitem.pics}}" class="image"></image>
+                <view class="name">{{iitem.id}}</view>
+                <view class="name">{{iitem.name}}</view>
+                <view class="name">{{iitem.birthday}}</view>
+                <navigator class="edit" url="/pages/customer/customerdetail?customer_id={{iitem.id}}">···</navigator>
+            </view>
+        <view class='no-more' wx:if="{{!goodsList.length==0 || !searchStatus}}">没有更多了</view>   
+    </view>
+</scroll-view>

@@ -1,0 +1,58 @@
+<!--pages/settings/changemm.wxml-->
+<view class="container">    
+    <form bindsubmit='formSubmit'>
+    <view class="edit-container">
+        <!-- 输入框 -->
+        <view class="a-item">
+                <view class="input-wrap">
+                    原密码 | 
+                </view>
+                <view class="input-wrap2">
+                    <input 
+                    name="oldpwd"
+                    password='true' 
+                    cursor-spacing='80' 
+                    class='a-input' 
+                    placeholder='请输入原密码'>
+                    </input>
+                </view>
+        </view>
+        <view class="a-item">
+                <view class="input-wrap">
+                    新密码 | 
+                </view>
+                <view class="input-wrap2">
+                    <input 
+                    name="newpwd"
+                    password='true' 
+                    cursor-spacing='80' 
+                    class='a-input' 
+                    placeholder='请输入新密码'>
+                    </input>
+                </view>
+        </view>
+        <view class="a-item">
+                <view class="input-wrap">
+                    新密码 | 
+                </view>
+                <view class="input-wrap2">
+                    <input 
+                    name="newpwd2"
+                    password='true' 
+                    cursor-spacing='80' 
+                    class='a-input' 
+                    placeholder='请确认一遍新密码'>
+                    </input>
+                </view>
+        </view>
+        <!-- 提交按钮 -->
+    </view>
+    <view class="btn-wrap">
+            <view class="btn">
+                提交
+            </view>
+            <button form-type='submit'>   
+            </button>
+    </view>
+    </form>
+</view>

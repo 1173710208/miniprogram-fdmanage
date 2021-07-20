@@ -1,0 +1,70 @@
+.center {
+  display: flex;
+  justify-content: center;
+}
+.title {
+  font-size: 30rpx;
+  font-weight: 600;
+  color: #333333;
+}
+.padding10 {
+  padding: 10rpx;
+}
+.leftpadding {
+  color: #333;
+  border-left: 7rpx solid currentColor;
+}
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 15rpx;
+}
+.menu navigator {
+  width: 33.33%;
+  text-align: center;
+  border: 2rpx solid #dddddd;
+  padding: 20rpx;
+}
+.menu navigator .item_img_nromal {
+  font-size: 60rpx;
+  color: #ffab19;
+}
+.menu navigator .item_img_warn {
+  font-size: 60rpx;
+  color: red;
+}
+.menu navigator .item_img_convenience {
+  font-size: 60rpx;
+  color: #ffab19;
+}
+.menu navigator .item_img_all {
+  font-size: 60rpx;
+  color: #ffab19;
+}
+.menu navigator .item_img_today {
+  font-size: 60rpx;
+  color: #f37835;
+}
+.menu navigator .item_img_special {
+  font-size: 60rpx;
+  color: red;
+}
+.menu navigator .item_name {
+  font-size: 28rpx;
+  padding: 10rpx;
+  color: #666;
+}
+.menu navigator .item_num {
+  font-size: 28rpx;
+  padding: 10rpx;
+  color: red;
+}
+.menu navigator .item_num1 {
+  font-size: 28rpx;
+  padding: 10rpx;
+  color: #666666;
+}
+.menu .copyright {
+  text-align: center;
+  color: #dddddd;
+}

@@ -1,0 +1,19 @@
+<!--pages/us/us.wxml-->
+<view class="container">
+    <view class='about-wrap'>
+        <view class='title'>樊登读书</view>
+        <view class='content'>
+            开源微信小程序
+        </view>
+        <view class="line"></view>
+        <view class="content">开发者：曾智</view>
+        <view class="content">联系方式：18800416241</view>
+        <view class="line"></view>
+        <view class='content'>
+            樊登读书：http://www.fandengread.com
+        </view>
+        <view class='content_image'>
+            <image mode="widthFix" src="../../icons/login.png"></image>
+        </view>
+    </view>
+</view>

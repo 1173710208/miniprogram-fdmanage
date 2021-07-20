@@ -1,0 +1,86 @@
+<form bindsubmit='formSubmit'>
+<view class="container">
+    <view class="edit-container">
+            <view class="a-item">
+                <view class="input-wrap">
+                    编号 | 
+                </view>
+                <view class="input-wrap2">
+                    {{goodsObj.id}}
+                </view>
+            </view>
+            <view class="a-item">
+                <view class="input-wrap">
+                    名称 | 
+                </view>
+                <view class="input-wrap2">
+                    <input 
+                    name="name"
+                    cursor-spacing='80' 
+                    class='a-input' 
+                    placeholder='{{goodsObj.name}}'>
+                    </input>                    
+                </view>
+            </view>           
+            <view class="a-item">
+                <view class="input-wrap">
+                    价格 | 
+                </view>
+                <view class="input-wrap2">
+                    <input 
+                    name="price"
+                    cursor-spacing='80' 
+                    class='a-input' 
+                    placeholder='{{goodsObj.price}}'>
+                    </input>                    
+                </view>
+            </view>           
+            <view class="a-item">
+                <view class="input-wrap">
+                    有效时长 | 
+                </view>
+                <view class="input-wrap2">
+                    <input 
+                    name="days"
+                    cursor-spacing='80' 
+                    class='a-input' 
+                    placeholder='{{goodsObj.days}}天'>
+                    </input>                    
+                </view>
+            </view>           
+            <view class="a-item">
+                <view class="input-wrap">
+                    借阅本书 | 
+                </view>
+                <view class="input-wrap2">
+                    <input 
+                    name="nums"
+                    cursor-spacing='80' 
+                    class='a-input' 
+                    placeholder='{{goodsObj.nums}}本'>
+                    </input>                    
+                </view>
+            </view>           
+            <view class="a-item">
+                <view class="input-wrap">
+                    借阅天数 | 
+                </view>
+                <view class="input-wrap2">
+                    <input 
+                    name="day"
+                    cursor-spacing='80' 
+                    class='a-input' 
+                    placeholder='{{goodsObj.day}}天'>
+                    </input>                    
+                </view>
+            </view>           
+    </view>
+    <view class="btn-wrap">
+            <view class="btn">
+                提交
+            </view>
+            <button form-type='submit'>   
+            </button>
+    </view>
+</view>
+</form>

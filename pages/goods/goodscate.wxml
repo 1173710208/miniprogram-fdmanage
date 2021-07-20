@@ -1,0 +1,55 @@
+<!--pages/goods/goodscate.wxml-->
+<scroll-view class="container" style="height: 100%;">
+    <!-- 搜索框 -->
+    <view class="search-header">
+        <view class="input-box">
+            <!-- 搜索符号 -->
+            <image class="icon-search" src="/icons/sousuo.png"></image>
+            <!-- 输入框 -->
+            <input bindinput="handlesinput"
+            value="{{inpValue}}" placeholder="请输入您要搜索的东西" 
+            bindinput="handleInput"class="keywrod"/>
+            <!-- 清空输入框按钮 -->
+            <image 
+            src="/icons/delete.png" 
+            class="del" 
+            wx:if="{{isFocus}}" 
+            bindtap="clearKeyword"/>
+        </view>
+        <!-- 新增按钮 -->
+        <navigator url="../../pages/goods/newgoodscate" class="right">
+            <text class="iconfont icon-icon--"></text>
+        </navigator>
+    </view>
+    <!-- 搜索前 -->
+    <view class="no-search" wx:if="{{!searchStatus}}">
+            <view class="goods-box" 
+            wx:for="{{goodsList}}" 
+            wx:for-index="iindex" 
+            wx:for-item="iitem" 
+            wx:key="id">
+                <image mode="aspectFit" src="{{iitem.pics}}" class="image"></image>
+                <view class="name">{{iitem.name}}</view>
+                <navigator class="edit" url="../../pages/goods/goodscatedetail?goodscate_id={{iitem.id}}">···</navigator>
+            </view>
+        <view class='no-more'>没有更多了</view>   
+    </view>
+    <!-- 搜索后 -->
+    <view class="search-result" wx:if="{{searchStatus&&searchgoodsList.length}}">
+        <view class="goods-box" 
+            wx:for="{{searchgoodsList}}" 
+            wx:for-index="iindex" 
+            wx:for-item="iitem" 
+            wx:key="id">
+                <image mode="aspectFit" src="{{iitem.pics}}" class="image"></image>
+                <view class="name">{{iitem.name}}</view>
+                <navigator class="edit" url="../../pages/goods/goodscatedetail?goodscate_id={{iitem.id}}">···</navigator>
+            </view>
+        <view class='no-more'>没有更多了</view>            
+    </view>
+    <!-- 没有搜索结果 -->
+    <view class="search-result-empty" wx:if="{{!searchgoodsList.length && searchStatus}}">
+        <image class="icon" src="/icons/no-search.png"></image>
+        <text class="text">没找到，换个关键字试试</text>
+    </view>
+</scroll-view>

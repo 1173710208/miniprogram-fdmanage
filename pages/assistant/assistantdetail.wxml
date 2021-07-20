@@ -1,0 +1,84 @@
+<view class="detail_swiper">
+    <image class="image"  bindtap="handlePrevewImage"
+    mode="aspectFit" src="{{goodsObj.pics}}"/>
+</view>
+
+<view class="container">
+    <view class="edit-container">
+            <view class="a-item">
+                <view class="input-wrap">
+                    编号 | 
+                </view>
+                <view class="input-wrap2">
+                    {{goodsObj.id}}
+                </view>
+            </view>
+            <view class="a-item">
+                <view class="input-wrap">
+                    姓名 | 
+                </view>
+                <view class="input-wrap2">
+                    {{goodsObj.name}}
+                </view>
+            </view>
+            <view class="a-item">
+                <view class="input-wrap">
+                    性别 | 
+                </view>
+                <view class="input-wrap2" wx:if="{{goodsObj.gender==1}}">
+                    男
+                </view>
+                <view class="input-wrap2" wx:if="{{goodsObj.gender==0}}">
+                    女
+                </view>
+            </view>    
+            <view class="a-item">
+                <view class="input-wrap">
+                    职务 | 
+                </view>
+                <view class="input-wrap2"wx:if="{{goodsObj.post==1}}">
+                    管理员
+                </view>
+                <view class="input-wrap2"wx:if="{{goodsObj.post==2}}">
+                    店长
+                </view>
+                <view class="input-wrap2"wx:if="{{goodsObj.post==3}}">
+                    店员
+                </view>
+                <view class="input-wrap2"wx:if="{{goodsObj.post==4}}">
+                    厨师
+                </view>
+            </view>                      
+            <view class="a-item">
+                <view class="input-wrap">
+                    电话 | 
+                </view>
+                <view class="input-wrap2">
+                    {{goodsObj.phonenum}}
+                </view>
+            </view>           
+                 
+            <view class="a-item">
+                <view class="input-wrap">
+                    入职日期 | 
+                </view>
+                <view class="input-wrap2">
+                    {{goodsObj.day}}
+                </view>
+            </view>  
+                     
+    </view>
+    <view class="btn-wrap">
+            <view class="btn1" bindtap="edit">
+            编辑信息
+            </view>
+            </view>
+    <view class="btn-wrap">
+        <view class="btn2" bindtap="delete">
+        删除类别
+        </view>
+    </view>
+</view>
+
+<!-- 修改密码按钮 -->
+

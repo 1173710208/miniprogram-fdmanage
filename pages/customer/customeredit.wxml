@@ -1,0 +1,132 @@
+<!--pages/customer/customeredit.wxml-->
+
+<view class="detail_swiper">
+    <image class="image"  bindtap="ChangeImage"
+    mode="aspectFit" src="{{chooseImgs}}"/>
+</view>
+<form bindsubmit='formSubmit'>
+<view class="container">
+    <view class="edit-container">
+             <view class="a-item">
+                <view class="input-wrap">
+                    编号 | 
+                </view>
+                <view class="input-wrap2">
+                    {{goodsObj.id}}
+                </view>
+            </view>
+            <view class="a-item">
+                <view class="input-wrap">
+                    姓名 | 
+                </view>
+                <view class="input-wrap2">
+                    <input 
+                    name="name"
+                    cursor-spacing='80' 
+                    class='a-input' 
+                    placeholder='{{goodsObj.name}}'>
+                    </input>                    
+                </view>
+            </view>
+             <view class="a-item">
+                <view class="input-wrap">
+                    电话 | 
+                </view>
+                <view class="input-wrap2">
+                    <input 
+                    name="phonenum"
+                    cursor-spacing='80' 
+                    class='a-input' 
+                    placeholder='{{goodsObj.phonenum}}'>
+                    </input>                    
+                </view>
+            </view>    
+            <view class="a-item">
+                <view class="input-wrap">
+                    密码 | 
+                </view>
+                <view class="input-wrap2">
+                    <input 
+                    name="mm"
+                    cursor-spacing='80' 
+                    class='a-input' 
+                    placeholder='{{goodsObj.password}}'>
+                    </input>                    
+                </view>
+            </view>          
+            <view class="a-item">
+                <view class="input-wrap">
+                    性别 | 
+                </view>
+                <view class="input-wrap2">
+                    <picker class="input-wrap2" mode="selector" value="{{sex}}" range="{{sexrange}}" bindchange="bindsexChange">
+                        <view wx:if="{{!choosesex}}">
+                          <view wx:if="{{goodsObj.gender==1}}">男</view>
+                          <view wx:if="{{goodsObj.gender==0}}">女</view>
+                        </view>
+                        <view wx:else> {{sex}}</view>
+                    </picker>                  
+                </view>
+            </view>                 
+            <view class="a-item">
+                <view class="input-wrap">
+                    生日 | 
+                </view>
+                <picker class="input-wrap2" mode="date" value="{{date}}" start="1900-01-01" end="2021-06-11" bindchange="bindDateChange">
+                    <view wx:if="{{!choosebirthday}}">
+                      {{goodsObj.birthday}}
+                    </view>
+                    <view wx:else> {{date}}</view>
+                </picker>
+            </view>       
+            <view class="a-item">
+                <view class="input-wrap">
+                    借阅计划 | 
+                </view>
+                <picker class="input-wrap2" mode="selector" value="{{plan}}" range="{{planrange}}" bindchange="bindplanChange">
+                        <view wx:if="{{!chooseplan}}">
+                            <view wx:if="{{goodsObj.plan==1}}">
+                                一年制普通会员
+                            </view>
+                            <view wx:if="{{goodsObj.plan==2}}">
+                                两年制普通会员
+                            </view>
+                            <view wx:if="{{goodsObj.plan==3}}">
+                                三年制普通会员
+                            </view>
+                            <view wx:if="{{goodsObj.plan==4}}">
+                                一年制超级会员
+                            </view>
+                            <view wx:if="{{goodsObj.plan==5}}">
+                                两年制超级会员
+                            </view>
+                            <view wx:if="{{goodsObj.plan==6}}">
+                                三年制超级会员
+                            </view>
+                        </view>
+                        <view wx:else> {{plan}}</view>
+                    </picker>  
+            </view>                   
+            <view class="a-item">
+                <view class="input-wrap">
+                    会员到期 | 
+                </view>
+                <view class="input-wrap2">
+                    <view wx:if="{{goodsObj.day==1}}">
+                    未到期
+                    </view>
+                    <view wx:if="{{goodsObj.day==0}}">
+                        已到期
+                    </view>
+                </view>
+            </view>          
+    </view>
+    <view class="btn-wrap">
+            <view class="btn">
+                提交
+            </view>
+            <button form-type='submit'>   
+            </button>
+    </view>
+</view>
+</form>

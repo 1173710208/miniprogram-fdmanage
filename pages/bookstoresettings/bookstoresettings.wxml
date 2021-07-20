@@ -1,0 +1,64 @@
+<!--pages/bookstoresettings/bookstoresettings.wxml-->
+<view class="container">
+    <view class='edit-container'>
+        <view class="a-item">
+            <view class="input-wrap">
+                店名 | 
+            </view>
+            <view class="input-wrap2">
+                {{bookstoresettings.name}}
+            </view>
+        </view>
+        <view class="a-item">
+            <view class="input-wrap">
+                店长 |  
+            </view>
+            <view class="input-wrap2">
+                {{bookstoresettings.shopkeeper}}
+            </view>
+        </view>
+        <view class="a-item">
+            <view class="input-wrap">
+                电话 |
+            </view>
+            <view class="input-wrap2">
+                {{bookstoresettings.phonenum}}
+            </view>
+        </view>
+        <view class="a-item">
+            <view class="input-wrap">
+                微信 |
+            </view>
+            <view class="input-wrap2">
+                {{bookstoresettings.wechat}}
+            </view>
+        </view>
+        <view class="a-item">
+            <view class="input-wrap">
+                邮箱 |
+            </view>
+            <view class="input-wrap2">
+                {{bookstoresettings.email}}
+            </view>
+        </view>
+        <view class="a-item">
+            <view class="input-wrap">
+                简介 |
+            </view>
+            <view class="input-wrap2">
+                {{bookstoresettings.abstract}}
+            </view>
+        </view>
+        <view class="a-item">
+            <view class="input-wrap">
+                地址 |
+            </view>
+            <view class="input-wrap2">
+                {{bookstoresettings.address}}
+            </view>
+        </view>
+    </view>
+    <view class='btn-wrap' >
+        <view  class="btn" bindtap="edit">修改</view>
+    </view>
+</view>

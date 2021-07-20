@@ -1,0 +1,50 @@
+
+<form bindsubmit='formSubmit'>
+<view class="container">
+    <view class="edit-container">
+            <view class="a-item">
+                <view class="input-wrap">
+                    编号 | 
+                </view>
+                <view class="input-wrap2">
+                    提交后系统自动分配
+                </view>
+            </view>
+            <view class="a-item">
+                <view class="input-wrap">
+                    金额 | 
+                </view>
+                <view class="input-wrap2">
+                    <input 
+                    name="price"
+                    cursor-spacing='80' 
+                    class='a-input' 
+                    placeholder='请输入金额'>
+                    </input>                    
+                </view>
+            </view>
+             <view class="a-item">
+                <view class="input-wrap">
+                    缘由 | 
+                </view>
+                <view class="input-wrap2">
+                    <input 
+                    name="reason"
+                    cursor-spacing='80' 
+                    class='a-input' 
+                    placeholder='请输入缘由'>
+                    </input>                    
+                </view>
+            </view>    
+    </view>
+    <view class="btn-wrap">
+            <view class="btn">
+                提交
+            </view>
+            <button form-type='submit'>   
+            </button>
+    </view>
+</view>
+</form>
+
+

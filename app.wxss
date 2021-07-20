@@ -1,0 +1,46 @@
+@import "./styles/iconfont.wxss";
+
+/* 微信小程序中 不识别 通配符‘*’ */
+
+page,
+view,
+swiper,
+text,
+swiper-item,
+navigator {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+/* 主题颜色 通过变量来实现 
+1 less中 存在变量
+2 原生 wxss wxml 也存在变量
+*/
+
+page {
+    /* 定义主题颜色 */
+    --themeColor: #fcd000;
+    /* 定义统一字体大小
+        假设设计稿为375px
+        1px=2rpx
+        14px=28rpx */
+    font-size: 28rpx;
+    font-family: consolas;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+}
+
+.title {
+    font-size: 28rpx;
+    font-weight: 600;
+    color: #2c2c2c;
+}
+
+.padding10 {
+    padding: 10rpx;
+}

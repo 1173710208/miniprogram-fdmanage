@@ -1,0 +1,144 @@
+<view class="detail_swiper">
+    <image class="image"  bindtap="ChangeImage"
+    mode="aspectFit" src="{{chooseImgs}}"/>
+</view>
+<form bindsubmit='formSubmit'>
+<view class="container">
+    <view class="edit-container">
+            <view class="a-item">
+                <view class="input-wrap">
+                    编号 | 
+                </view>
+                <view class="input-wrap2">
+                    提交后系统自动分配
+                </view>
+            </view>
+            <view class="a-item">
+                <view class="input-wrap">
+                    书名 | 
+                </view>
+                <view class="input-wrap2">
+                    <input 
+                    name="title"
+                    cursor-spacing='80' 
+                    class='a-input' 
+                    placeholder='请输入书名'>
+                    </input>                    
+                </view>
+            </view>
+             <view class="a-item">
+                <view class="input-wrap">
+                    作者 | 
+                </view>
+                <view class="input-wrap2">
+                    <input 
+                    name="author"
+                    cursor-spacing='80' 
+                    class='a-input' 
+                    placeholder='请输入图书作者'>
+                    </input>                    
+                </view>
+            </view>    
+            <view class="a-item">
+                <view class="input-wrap">
+                    出版社 | 
+                </view>
+                <view class="input-wrap2">
+                    <input 
+                    name="publisher"
+                    cursor-spacing='80' 
+                    class='a-input' 
+                    placeholder='请输入图书出版社'>
+                    </input>                    
+                </view>
+            </view>          
+            <view class="a-item">
+                <view class="input-wrap">
+                    进价 | 
+                </view>
+                <view class="input-wrap2">
+                    <input 
+                    name="pricein"
+                    cursor-spacing='80' 
+                    class='a-input' 
+                    placeholder='请输入图书进价'>
+                    </input>                    
+                </view>
+            </view>          
+            <view class="a-item">
+                <view class="input-wrap">
+                    售价 | 
+                </view>
+                <view class="input-wrap2">
+                    <input 
+                    name="priceout"
+                    cursor-spacing='80' 
+                    class='a-input' 
+                    placeholder='请输入图书售价'>
+                    </input>                    
+                </view>
+            </view>           
+            <view class="a-item">
+                <view class="input-wrap">
+                    库存 | 
+                </view>
+                <view class="input-wrap2">
+                    <input 
+                    name="stock"
+                    cursor-spacing='80' 
+                    class='a-input' 
+                    placeholder='请输入图书库存'>
+                    </input>                    
+                </view>
+            </view>    
+            <view class="a-item">
+                <view class="input-wrap">
+                    ISBN | 
+                </view>
+                <view class="input-wrap2">
+                    <input 
+                    name="mm"
+                    cursor-spacing='80' 
+                    class='a-input' 
+                    placeholder='请输入图书ISBN码'>
+                    </input>                    
+                </view>
+            </view>    
+            <view class="a-item">
+                <view class="input-wrap">
+                    简介 | 
+                </view>
+                <view class="input-wrap2">
+                    <input 
+                    name="mm"
+                    cursor-spacing='80' 
+                    class='a-input' 
+                    placeholder='请输入图书简介'>
+                    </input>                    
+                </view>
+            </view>    
+            <view class="a-item">
+                <view class="input-wrap">
+                    类别 | 
+                </view>
+                <view class="input-wrap2">
+                    <picker class="input-wrap2" mode="selector" value="{{plan}}" range="{{planrange}}" bindchange="bindplanChange">
+                        <view wx:if="{{!chooseplan}}">
+                          点击选择图书类别
+                        </view>
+                        <view wx:else> {{plan}}</view>
+                    </picker>                  
+                </view>
+            </view>  
+    </view>
+    <view class="btn-wrap">
+            <view class="btn">
+                提交
+            </view>
+            <button form-type='submit'>   
+            </button>
+    </view>
+</view>
+</form>
+
+

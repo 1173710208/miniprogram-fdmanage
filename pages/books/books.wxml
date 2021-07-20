@@ -1,0 +1,73 @@
+<!--pages/books/books.wxml-->
+<!-- 空白条10rpx -->
+<view class="padding10"></view>
+<!-- 图书管理 -->
+<view class="title padding10 leftpadding">
+  图书管理
+</view>
+<view class="menu">
+ <navigator
+  url="/pages/books/bookslist" 
+  hover-class="navigator-hover" 
+  open-type="navigate"
+  bindtap='scanCode'>
+    <text class="item_img_convenience iconfont icon-saoyisao"> 
+    </text>
+    <view class="item_name"> 
+      扫码新增图书
+    </view>
+  </navigator>
+  <navigator
+  url="/pages/books/bookslist" 
+  hover-class="navigator-hover" 
+  open-type="navigate">
+    <text class="item_img_convenience iconfont icon-youji"> 
+    </text>
+    <view class="item_name">
+      手动新增图书
+    </view>
+  </navigator>
+  <navigator
+  url="/pages/books/bookslist" 
+  hover-class="navigator-hover" 
+  open-type="navigate">
+    <text class="item_img_convenience iconfont icon-youji"> 
+    </text>
+    <view class="item_name">
+      全部图书
+    </view>
+  </navigator>
+</view>
+
+<!-- 空白条10rpx -->
+<view class="padding10"></view>
+
+<!-- 借阅管理 -->
+<view class="title padding10 leftpadding">
+  借阅管理
+</view>
+<view class="menu">
+  <navigator
+  url="/pages/plan/plan" 
+  hover-class="navigator-hover" 
+  open-type="navigate">
+    <text class="item_img_convenience iconfont icon-xiangqing"> 
+    </text>
+    <view class="item_name"> 
+      借阅计划
+    </view>
+  </navigator>
+  <navigator
+  url="/pages/borrowlist/borrowlist" 
+  hover-class="navigator-hover" 
+  open-type="navigate">
+    <text class="item_img_convenience iconfont icon-dingdan"> 
+    </text>
+    <view class="item_name">
+      借阅订单
+    </view>
+  </navigator>
+</view>
+
+
+  

@@ -1,0 +1,38 @@
+<view class="detail_swiper">
+    <image class="image"  bindtap="handlePrevewImage"
+    mode="aspectFit" src="{{goodsObj.pics}}"/>
+</view>
+
+<view class="container">
+    <view class="edit-container">
+            <view class="a-item">
+                <view class="input-wrap">
+                    编号 | 
+                </view>
+                <view class="input-wrap2">
+                    {{goodsObj.id}}
+                </view>
+            </view>
+            <view class="a-item">
+                <view class="input-wrap">
+                    名称 | 
+                </view>
+                <view class="input-wrap2">
+                    {{goodsObj.name}}
+                </view>
+            </view>           
+    </view>
+    <view class="btn-wrap">
+            <view class="btn1" bindtap="edit">
+            编辑信息
+            </view>
+            </view>
+    <view class="btn-wrap">
+        <view class="btn2" bindtap="delete">
+        删除类别
+        </view>
+    </view>
+</view>
+
+<!-- 修改密码按钮 -->
+

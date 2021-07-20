@@ -1,0 +1,80 @@
+/* pages/books/newbookscate.wxss */
+page{
+    min-height: 100%;
+    background-color: #f8f8f8;
+}
+
+.detail_swiper{
+    height: 30vh;
+    text-align: center;
+    .image{
+        width: 60%;
+        height:30vh;
+    }
+}
+
+.container{
+    min-height: 100%;
+    /* align-items: stretch; */
+    background: #f8f8f8;
+    overflow-x: hidden;
+    padding: 30rpx;
+    .edit-container{
+        background: #fff;
+        width: 100%;
+        margin-bottom: 30rpx;
+        border-radius: 10rpx;
+        box-shadow: 2rpx 8rpx 18rpx #f1f1f1;
+        .a-item{
+            display: flex;
+            padding-left: 30rpx;
+            border-bottom: 1rpx solid #f1f1f1;
+            height: 10vh;
+            align-items: center;
+            .input-wrap{
+                flex: 1;
+            }
+            .input-wrap2{
+                flex: 3;
+                text-align: left;
+                margin-right: 44rpx;
+                margin-top: 32rpx;
+                margin-bottom: 32rpx;
+                color: #2c2c2c;
+                float: left;
+                .a-input {
+                    font-size: 28rpx;
+                    width: 100%;
+                }
+            }
+        }
+    }
+    .btn-wrap{
+        width: 100%;
+        padding: 24rpx 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        .btn{
+            height: 100rpx;
+            line-height: 100rpx;
+            text-align: center;
+            border-radius: 10rpx;
+            width: 100%;
+            color: #fff;
+            background: #ff6363;
+            box-shadow: 0rpx 10rpx 20rpx #ccc;
+            font-size: 28rpx;
+        }
+        button{
+            position: absolute;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            opacity: 0;
+            top: 0;
+        }
+    }
+}/* pages/goods/newgoodscate.wxss */

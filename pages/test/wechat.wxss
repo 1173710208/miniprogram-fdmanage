@@ -1,0 +1,76 @@
+/* pages/test/wechat.wxss */
+.headView {
+
+  margin: 90rpx 50rpx 90rpx 50rpx; /*上右下左*/
+
+}
+
+.headImageView {
+
+
+  margin-left: 235rpx;
+
+  margin-top: 25px;
+
+  margin-right: 25px;
+
+  margin-bottom: 0px;
+
+  height: 200rpx;
+}
+
+.headImage{
+
+  display: flex;
+
+  width: 100px;
+
+  height: 100px;
+
+}
+
+.titleText {
+
+  margin-left: 25px;
+
+  margin-top: 25px;
+
+  margin-bottom: 10px;
+
+  font-size: 14px;
+
+  color: #020e0f;
+
+  text-align: center;
+
+}
+
+.contentText {
+
+  margin-left: 25px;
+
+  margin-top: 0px;
+
+  margin-bottom: 0px;
+
+  font-size: 14px;
+
+  color: #666;
+
+  text-align: center;
+
+}
+
+.authBtn {
+
+  margin-top: 35px;
+
+  margin-left: 25px;
+
+  margin-right: 25px;
+
+  height: 45px;
+
+ font-size: 17.5px;
+
+}

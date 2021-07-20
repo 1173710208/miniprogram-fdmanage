@@ -1,0 +1,104 @@
+<!--pages/customer/customeredit.wxml-->
+
+<view class="detail_swiper">
+    <image class="image"  bindtap="ChangeImage"
+    mode="aspectFit" src="{{chooseImgs}}"/>
+</view>
+<form bindsubmit='formSubmit'>
+<view class="container">
+    <view class="edit-container">
+            <view class="a-item">
+                <view class="input-wrap">
+                    编号 | 
+                </view>
+                <view class="input-wrap2">
+                    {{goodsObj.id}}
+                </view>
+            </view>
+            <view class="a-item">
+                <view class="input-wrap">
+                    名称 | 
+                </view>
+                <view class="input-wrap2">
+                    <input 
+                    name="name"
+                    cursor-spacing='80' 
+                    class='a-input' 
+                    placeholder='{{goodsObj.name}}'>
+                    </input>                    
+                </view>
+            </view>
+             
+            <view class="a-item">
+                <view class="input-wrap">
+                    进价 | 
+                </view>
+                <view class="input-wrap2">
+                    <input 
+                    name="pricein"
+                    cursor-spacing='80' 
+                    class='a-input' 
+                    placeholder='{{goodsObj.pricein}}'>
+                    </input>                    
+                </view>
+            </view>          
+            <view class="a-item">
+                <view class="input-wrap">
+                    售价 | 
+                </view>
+                <view class="input-wrap2">
+                    <input 
+                    name="priceout"
+                    cursor-spacing='80' 
+                    class='a-input' 
+                    placeholder='{{goodsObj.priceout}}'>
+                    </input>                    
+                </view>
+            </view>           
+            <view class="a-item">
+                <view class="input-wrap">
+                    库存 | 
+                </view>
+                <view class="input-wrap2">
+                    <input 
+                    name="num"
+                    cursor-spacing='80' 
+                    class='a-input' 
+                    placeholder='{{goodsObj.num}}'>
+                    </input>                    
+                </view>
+            </view>    
+            <view class="a-item">
+                <view class="input-wrap">
+                    类别 | 
+                </view>
+                <view class="input-wrap2">
+                    <picker class="input-wrap2" mode="selector" value="{{plan}}" range="{{planrange}}" bindchange="bindplanChange">   
+                        <view wx:if="{{!chooseplan}}">                    
+                        <view class="input-wrap2"wx:if="{{goodsObj.cate==1}}">
+                            文具
+                        </view>
+                        <view class="input-wrap2"wx:if="{{goodsObj.cate==2}}">
+                            饮料
+                        </view>
+                        <view class="input-wrap2"wx:if="{{goodsObj.cate==3}}">
+                            小食
+                        </view>
+                        <view class="input-wrap2"wx:if="{{goodsObj.cate==4}}">
+                            小商品
+                        </view>
+                        </view>
+                        <view wx:else> {{plan}}</view> 
+                    </picker>                  
+                </view>
+            </view>         
+    </view>
+    <view class="btn-wrap">
+            <view class="btn">
+                提交
+            </view>
+            <button form-type='submit'>   
+            </button>
+    </view>
+</view>
+</form>

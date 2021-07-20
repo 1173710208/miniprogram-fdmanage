@@ -1,0 +1,55 @@
+<scroll-view class="container" style="height: 100%;">
+    <view class="search-header">
+        <view class="input-box">
+            <!-- 搜索符号 -->
+            <image class="icon-search" src="/icons/sousuo.png"></image>
+            <!-- 输入框 -->
+            <input 
+            value="{{inpValue}}" placeholder="请输入收入原因" 
+            bindinput="handleInput"class="keywrod"/>
+            <!-- 清空输入框按钮 -->
+            <image 
+            src="/icons/delete.png" 
+            class="del" 
+            wx:if="{{isFocus}}" 
+            bindtap="clearKeyword"/>
+        </view>
+        <!-- 新增按钮 -->
+        <navigator url="/pages/othercomein/newothercomein" class="right">
+            <text class="iconfont icon-icon--"></text>
+        </navigator>
+    </view>
+    <!-- 排序框 -->
+            <view class="sort-box">
+                <view class="item {{currentSortType == 'default' ? 'active' : ''}}" bindtap="openSortFilter" id="defaultSort">
+                    <view class="txt">综合</view>
+                </view>
+                <view class="item {{currentSortType == 'id' ? 'active' : ''}}" bindtap="openSortFilter" id="idSort">
+                    <view class="txt">日期</view>
+                    <image class="icon" src="/icons/order-by.png" wx:if="{{currentSortType == 'default' }}"></image>
+                    <block>
+                        <image class="icon" wx:if="{{currentSortOrder == 'asc'&&currentSortType == 'id'}}" src='/icons/asc.png'></image>
+                        <image class="icon" wx:elif="{{currentSortOrder == 'desc'&&currentSortType == 'id'}}" src='/icons/desc.png'></image>
+                    </block>
+                </view>
+            </view>
+    <!-- 搜索前 -->
+    <view class="no-search" >        
+            <view class="goods-box" 
+            wx:for="{{goodsList}}" 
+            wx:for-index="iindex" 
+            wx:for-item="iitem" 
+            wx:key="id">
+                <view class="name">{{iitem.date}}</view>
+                <view class="name">{{iitem.price}}</view>
+                <view class="name">{{iitem.reason}}</view>
+            </view>
+        <view class='no-more' wx:if="{{!goodsList.length==0 || !searchStatus}}">没有更多了</view>   
+    </view>
+    
+    <!-- 没有搜索结果 -->
+    <view class="search-result-empty" wx:if="{{goodsList.length==0 && searchStatus}}">
+        <image class="icon" src="/icons/no-search.png"></image>
+        <text class="text">没找到，换个关键字试试</text>
+    </view>
+</scroll-view>

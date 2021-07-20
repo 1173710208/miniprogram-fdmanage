@@ -1,0 +1,111 @@
+<!--pages/bookstoresettings/bookstoresettings.wxml-->
+<view class="container">
+    <form name="f" bindsubmit='formSubmit'>
+    <view class='edit-container'>       
+        <view class="a-item">
+            <view class="input-wrap">
+                店名 | 
+            </view>
+            <view class="input-wrap2">
+                <input 
+                name="name" 
+                cursor-spacing='100' 
+                class='a-input' 
+                placeholder='{{bookstoresettings.name}}'>
+                </input>
+            </view>
+        </view>
+        <view class="a-item">
+            <view class="input-wrap">
+                店长 |  
+            </view>
+            <view class="input-wrap2">
+                <input 
+                name="shopkeeper"
+                cursor-spacing='100' 
+                class='a-input' 
+                placeholder='{{bookstoresettings.shopkeeper}}'>
+                </input>
+            </view>
+        </view>
+        <view class="a-item">
+            <view class="input-wrap">
+                电话 |  
+            </view>
+            <view class="input-wrap2">
+                <input 
+                name="phonenum"
+                cursor-spacing='100' 
+                class='a-input' 
+                placeholder='{{bookstoresettings.phonenum}}'>
+                </input>
+            </view>
+        </view>
+        <view class="a-item">
+            <view class="input-wrap">
+               微信 |  
+            </view>
+            <view class="input-wrap2">
+                <input 
+                name="wechat"
+                cursor-spacing='100' 
+                class='a-input' 
+                placeholder='{{bookstoresettings.wechat}}'>
+                </input>
+            </view>
+        </view>
+        <view class="a-item">
+            <view class="input-wrap">
+                邮箱 |  
+            </view>
+            <view class="input-wrap2">
+                <input 
+                name="email"
+                cursor-spacing='100' 
+                class='a-input' 
+                placeholder='{{bookstoresettings.email}}'>
+                </input>
+            </view>
+        </view>
+        <view class="a-item">
+            <view class="input-wrap">
+                简介 |  
+            </view>
+            <view class="input-wrap2">
+                <input
+                name="abstract"
+                 cursor-spacing='100' 
+                 class='a-input'
+                  placeholder='{{bookstoresettings.abstract}}'>
+                  </input>
+            </view>
+        </view>
+        <view class="a-item">
+            <view class="input-wrap">
+                地址 |
+            </view>
+            <view class="input-wrap2">
+                <input 
+                name="address"
+                cursor-spacing='100' 
+                class="a-input" 
+                placeholder="{{bookstoresettings.address}}" />
+            </view>
+        </view>
+        <!-- <view class="a-item">
+            <view class="input-wrap">
+                地区 |
+            </view>
+            <view class="input-wrap2" bindtap="chooseRegion">
+                <input cursor-spacing='100' class="a-input" value="{{address.full_region}}" disabled="true" placeholder="黑龙江省哈尔滨市呼兰区    >" />
+                
+            </view>
+        </view> -->
+    </view>   
+    <view class='btn-wrap' >
+        <view class="btn active" >保存</view>
+        <button  form-type="submit">   
+        </button>
+    </view>
+    </form>
+</view>

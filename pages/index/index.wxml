@@ -1,0 +1,233 @@
+<!--index.wxml-->
+<!-- <view class="pyq_index">
+  <SearchInput></SearchInput>
+</view> -->
+<view class="center padding20" >
+  <image mode ="widthFix"    src="../../icons/index1.png"></image>
+</view>
+<!-- 空白条10rpx -->
+<view class="padding10"></view>
+
+<!-- 当前订单模块 -->
+<view class="title padding10 leftpadding">
+  当前订单
+</view>
+<view class="menu">
+  <navigator
+  url="/pages/newselllist/newselllist" 
+  hover-class="navigator-hover" 
+  open-type="navigate">
+    <text class="item_img_special iconfont icon-dingdandaifukuan"> 
+    </text>
+    <view class="item_name">
+      新的销售订单
+    </view>
+    <view class="item_num">
+      {{newsellnum}}
+    </view>
+  </navigator>
+  <navigator
+  url="/pages/newborrowlist/newborrowlist" 
+  hover-class="navigator-hover" 
+  open-type="navigate">
+    <text class="item_img_special iconfont icon-dingdan"> 
+    </text>
+    <view class="item_name">
+      新的借阅订单
+    </view>
+    <view class="item_num">
+     11
+    </view>
+  </navigator>
+  <navigator
+  url="/pages/newselllist/newselllist" 
+  hover-class="navigator-hover" 
+  open-type="navigate">
+    <text class="item_img_special iconfont icon-dingdandaifukuan"> 
+    </text>
+    <view class="item_name">
+      新的退款订单
+    </view>
+    <view class="item_num">
+      1
+    </view>
+  </navigator>
+  <navigator
+  url="/pages/newborrowlist/newborrowlist" 
+  hover-class="navigator-hover" 
+  open-type="navigate">
+    <text class="item_img_special iconfont icon-dingdan"> 
+    </text>
+    <view class="item_name">
+      逾期借阅订单
+    </view>
+    <view class="item_num">
+      3
+    </view>
+  </navigator>
+</view>
+
+<!-- 空白条10rpx -->
+<view class="padding10"> </view>
+
+<!-- 快捷操作模块 -->
+<view class="title padding10 leftpadding">
+  快捷操作
+</view>
+<view class="menu">
+  <navigator
+  url="/pages/books/bookslist" 
+  hover-class="navigator-hover" 
+  open-type="navigate"
+  bindtap='scanCode'>
+    <text class="item_img_convenience iconfont icon-saoyisao"> 
+    </text>
+    <view class="item_name"> 
+      扫码新增图书
+    </view>
+  </navigator>
+
+  <navigator
+  url="/pages/customer/newcustomer" 
+  hover-class="navigator-hover" 
+  open-type="navigate">
+    <text class="item_img_convenience iconfont icon-biaodankongjianlianxiren"> 
+    </text>
+    <view class="item_name">
+      新增会员
+    </view>
+  </navigator>
+</view>
+
+<!-- 空白条10rpx -->
+<view class="padding10"></view>
+
+<!-- 常用数据模块 -->
+<view class="title padding10 leftpadding">
+  常用数据
+</view>
+<view class="menu">
+  <navigator
+  url="/pages/books/bookslist" 
+  hover-class="navigator-hover" 
+  open-type="navigate">
+    <text class="item_img_all iconfont icon-youji"> 
+    </text>
+    <view class="item_name">
+      馆内图书
+    </view>
+    <view class="item_num1">
+      120
+    </view>
+  </navigator>
+  <navigator
+  url="/pages/customer/customer" 
+  hover-class="navigator-hover" 
+  open-type="navigate">
+    <text class="item_img_all iconfont icon-jieban"> 
+    </text>
+    <view class="item_name">
+      书店有效会员
+    </view>
+    <view class="item_num1">
+      {{customernum}}
+    </view>
+  </navigator>
+  <navigator
+  url="/pages/customer/customer" 
+  hover-class="navigator-hover" 
+  open-type="navigate">
+    <text class="item_img_all iconfont icon-jieban"> 
+    </text>
+    <view class="item_name">
+      书店过期会员
+    </view>
+    <view class="item_num1">
+      3
+    </view>
+  </navigator>
+  
+  <navigator
+  url="/pages/todaydata/todaydata" 
+  hover-class="navigator-hover" 
+  open-type="navigate">
+    <text class="item_img_all iconfont icon-feiyongbaohan"> 
+    </text>
+    <view class="item_name">
+      今日销售额
+    </view>
+    <view class="item_num1">
+      ￥{{xse}}
+    </view>
+  </navigator>
+  <navigator
+  url="/pages/todaydata/todaydata" 
+  hover-class="navigator-hover" 
+  open-type="navigate">
+    <text class="item_img_all iconfont icon-feiyongbaohan"> 
+    </text>
+    <view class="item_name">
+      今日销售成本
+    </view>
+    <view class="item_num1">
+      ￥1902
+    </view>
+  </navigator>
+  <navigator
+  url="/pages/todaydata/todaydata" 
+  hover-class="navigator-hover" 
+  open-type="navigate">
+    <text class="item_img_all iconfont icon-feiyongbaohan"> 
+    </text>
+    <view class="item_name">
+      今日利润
+    </view>
+    <view class="item_num1">
+      ￥1377
+    </view>
+  </navigator>
+  <navigator
+  url="/pages/todayborrowlist/todayborrowlist" 
+  hover-class="navigator-hover" 
+  open-type="navigate">
+    <text class="item_img_all iconfont icon-dingdan"> 
+    </text>
+    <view class="item_name">
+      今日借阅单数
+    </view>
+    <view class="item_num1">
+      11
+    </view>
+  </navigator>
+  <navigator
+  url="/pages/todayselllist/todayselllist" 
+  hover-class="navigator-hover" 
+  open-type="navigate">
+    <text class="item_img_all iconfont icon-dingdandaifukuan"> 
+    </text>
+    <view class="item_name">
+      今日销售单数
+    </view>
+    <view class="item_num1">
+      {{todaysellnum}}
+    </view>
+  </navigator>
+  <navigator
+  url="/pages/seven/seven" 
+  hover-class="navigator-hover" 
+  open-type="navigate">
+    <text class="item_img_all iconfont icon-huiyuan"> 
+    </text>
+    <view class="item_name">
+      7天内生日
+    </view>
+    <view class="item_num1">
+      {{seven}}
+    </view>
+  </navigator>
+</view>
+<!-- 空白条10rpx -->
+<view class="padding10"></view>
+<view class="copyright">
+  
+</view>

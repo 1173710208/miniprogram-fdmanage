@@ -1,0 +1,85 @@
+
+<view class="user_info_wrap">
+  <view  class="user_img_wrap">
+    <image class="user_bg" src="../../icons/zhanghu.png" ></image>
+    <view class="user_info">
+      <image class="user_icon" src="../../icons/zhanghu.png"></image>
+      <view class="user_name">{{user.name}}</view>
+      
+      <view class="line"></view>
+      <view class="logout" bindtap="logout">退出登录</view>
+    </view>
+  </view>
+  <!-- <view wx:else class="user_btn">
+    <navigator url="/pages/login/index" >登录</navigator>
+  </view> -->
+</view>
+<view class="user_content">
+  
+  <view class="user_main">
+    <!-- 个人信息 -->
+    <view class="history_wrap">
+      <navigator url="/pages/settings/selfsettings">
+          <view class="his_name">姓名</view>
+        <view class="his_num">{{user.name}}</view>
+      </navigator>
+      <navigator url="/pages/settings/selfsettings">
+        <view class="his_name">员工号</view>
+        <view class="his_num">{{user.id}}</view>
+      </navigator>
+      <navigator url="/pages/settings/selfsettings">
+          <view class="his_name">当前职位</view>
+        <view class="his_num">{{user.post}}</view>
+      </navigator>
+      <navigator url="/pages/settings/selfsettings">
+          <view class="line"></view>
+          <view class="his_name">个人信息 ></view>
+       
+      </navigator>
+    </view>
+    <!-- 设置 -->
+    <view class="orders_wrap">
+      <view class="orders_title"> 类别设置</view>
+      <view class="order_content">
+        <navigator url="/pages/books/bookscate">
+          <view class="item_img_all iconfont icon-youji"></view>
+          <view class="order_name">图书类别</view>
+        </navigator>
+        <navigator url="/pages/goods/goodscate">
+          <view class="item_img_convenience iconfont icon-xishuyongpin"></view>
+          <view class="order_name">商品类别</view>
+        </navigator>
+        <navigator url="/pages/assistant/assistantcate">
+          <view class="item_img_convenience iconfont icon-wode"></view>
+          <view class="order_name">员工类别</view>
+        </navigator>
+      </view>
+    </view>
+    <!-- 收货地址管理 -->
+    <view class="orders_wrap">
+      <view class="orders_title"> 店面信息管理</view>
+      <view class="order_content">
+        <navigator url="/pages/bookstoresettings/bookstoresettings">
+          <view class="item_img_convenience iconfont icon-shezhi"></view>
+          <view class="order_name">店面信息</view>
+        </navigator>
+      </view>
+    </view>
+    <!-- 应用信息相关 -->
+    <view class="app_info_wrap">
+      <view class="app_info_item app_info_contact">
+        <text>联系小程序开发者</text>
+        <text>+86 18800416241</text>
+      </view>
+      <navigator url="/pages/us/us" class="app_info_item">
+        关于我们 >
+      </navigator>
+      <view  class="app_info_share">
+        <view >把应用推荐给其他人 ></view>
+        <button open-type="share"></button>
+      </view>
+      
+    </view>
+    
+  </view>
+</view>

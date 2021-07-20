@@ -1,0 +1,120 @@
+<!--pages/sell/sell.wxml-->
+<!-- 空白条10rpx -->
+<view class="padding10"></view>
+<!-- 销售管理 -->
+<view class="title padding10 leftpadding">
+  销售管理
+</view>
+<view class="menu">
+  <navigator
+  url="/pages/selllist/selllist" 
+  hover-class="navigator-hover" 
+  open-type="navigate">
+    <text class="item_img_convenience iconfont icon-dingdandaifukuan"> 
+    </text>
+    <view class="item_name"> 
+      销售订单
+    </view>
+  </navigator>
+  <navigator
+  url="/pages/othercomein/othercomein" 
+  hover-class="navigator-hover" 
+  open-type="navigate">
+    <text class="item_img_convenience iconfont icon-jia"> 
+    </text>
+    <view class="item_name">
+      其他收入
+    </view>
+  </navigator>
+  <navigator
+  url="/pages/othercomeout/othercomeout" 
+  hover-class="navigator-hover" 
+  open-type="navigate">
+    <text class="item_img_convenience iconfont icon-jian"> 
+    </text>
+    <view class="item_name">
+      其他支出
+    </view>
+  </navigator>
+</view>
+
+
+<!-- 空白条10rpx -->
+<view class="padding10"></view>
+<!-- 库存管理 -->
+<view class="title padding10 leftpadding">
+  库存管理
+</view>
+<view class="menu">
+  <navigator
+  url="/pages/booksstock/booksstock" 
+  hover-class="navigator-hover" 
+  open-type="navigate">
+    <text class="item_img_convenience iconfont icon-youji"> 
+    </text>
+    <view class="item_name"> 
+      图书库存
+    </view>
+  </navigator>
+  <navigator
+  url="/pages/goodsstock/goodsstock" 
+  hover-class="navigator-hover" 
+  open-type="navigate">
+    <text class="item_img_convenience iconfont icon-licheng"> 
+    </text>
+    <view class="item_name">
+      商品库存
+    </view>
+  </navigator>
+  <navigator
+  url="/pages/othercomein/othercomein" 
+  hover-class="navigator-hover" 
+  open-type="navigate">
+    <text class="item_img_convenience iconfont icon-jia"> 
+    </text>
+    <view class="item_name">
+      进货单
+    </view>
+  </navigator>
+  <navigator
+  url="/pages/othercomeout/othercomeout" 
+  hover-class="navigator-hover" 
+  open-type="navigate">
+    <text class="item_img_convenience iconfont icon-jian"> 
+    </text>
+    <view class="item_name">
+     出货单
+    </view>
+  </navigator>
+</view>
+
+
+<!-- 空白条10rpx -->
+<view class="padding10"></view>
+<!-- 销售统计 -->
+<view class="title padding10 leftpadding">
+  销售统计
+</view>
+<view class="menu">
+  <navigator
+  url="/pages/sell/status" 
+  hover-class="navigator-hover" 
+  open-type="navigate">
+    <text class="item_img_convenience iconfont icon-feiyongbaohan"> 
+    </text>
+    <view class="item_name"> 
+      经营状况
+    </view>
+  </navigator>
+  <navigator
+  url="/pages/sell/chart" 
+  hover-class="navigator-hover" 
+  open-type="navigate">
+    <text class="item_img_convenience iconfont icon-dingdan"> 
+    </text>
+    <view class="item_name"> 
+      经营图表
+    </view>
+  </navigator>
+
+</view>

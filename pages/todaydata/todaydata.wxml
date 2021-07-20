@@ -1,0 +1,46 @@
+<view class="container">
+    <view class="edit-container">          
+            <view class="a-item">
+                <view class="input-wrap">
+                    利润 | 
+                </view>
+                <view class="input-wrap2"  >
+                    {{lr}}
+                </view>
+            </view>      
+            <view class="a-item">
+                <view class="input-wrap">
+                    销售额 | 
+                </view>
+                <view class="input-wrap2" >
+                    {{xse}}
+                </view>
+            </view>
+            <view class="a-item">
+                <view class="input-wrap">
+                    销售成本 | 
+                </view>
+                <view class="input-wrap2" >
+                    {{xscb}}
+                </view>
+            </view>           
+            <view class="a-item">
+                <view class="input-wrap">
+                    其他收入 | 
+                </view>
+                <view class="input-wrap2" >
+                    {{qtsr}}
+                </view>
+            </view>           
+            <view class="a-item">
+                <view class="input-wrap">
+                    其他支出 | 
+                </view>
+                <view class="input-wrap2" >
+                    {{qtzc}}
+                </view>
+            </view>  
+                    
+    </view>
+</view>
+

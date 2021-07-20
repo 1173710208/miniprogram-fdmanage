@@ -1,0 +1,60 @@
+<!--pages/settings/selfsettings.wxml-->
+<view class="container">
+    <!-- 信息框 -->
+    <view class="edit-container">
+        <view class="a-item">
+            <view class="input-wrap">
+                工号 | 
+            </view>
+            <view class="input-wrap2">
+                {{user.id}}
+            </view>
+        </view>
+        <view class="a-item">
+            <view class="input-wrap">
+                姓名 | 
+            </view>
+            <view class="input-wrap2">
+                {{user.name}}
+            </view>
+        </view>
+        <view class="a-item">
+            <view class="input-wrap">
+                性别 | 
+            </view>
+            <view class="input-wrap2">
+                {{user.sex}}
+            </view>
+        </view>
+        <view class="a-item">
+            <view class="input-wrap">
+                职务 | 
+            </view>
+            <view class="input-wrap2">
+                {{user.post}}
+            </view>
+        </view>
+        <view class="a-item">
+            <view class="input-wrap">
+                手机 | 
+            </view>
+            <view class="input-wrap2">
+                {{user.phonenum}}
+            </view>
+        </view>
+        <view class="a-item">
+            <view class="input-wrap">
+                入职 | 
+            </view>
+            <view class="input-wrap2">
+                {{user.date}}
+            </view>
+        </view>
+    </view>
+    <!-- 修改密码按钮 -->
+    <view class="btn-wrap">
+        <navigator url="/pages/settings/changemm" class="btn">
+        修改密码
+        </navigator>
+    </view>
+</view>

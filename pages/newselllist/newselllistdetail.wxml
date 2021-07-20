@@ -1,0 +1,58 @@
+<view class="container">
+    <view class="edit-container">
+            <view class="a-item">
+                <view class="input-wrap">
+                    编号：{{goodsObj.id}}
+                </view>
+            </view>
+            <view class="a-item">
+                <view class="input-wrap">
+                    下单顾客：{{goodsObj.customer}}
+                </view>
+            </view>
+             <view class="a-item">
+                <view class="input-wrap">
+                    接单店员：{{goodsObj.assistant}}
+                </view>
+            </view>    
+             <view class="a-item">
+                <view class="input-wrap">
+                    订单总价：￥{{goodsObj.price}}
+                </view>
+            </view>    
+            <view class="a-item">
+                <view class="input-wrap">
+                    订单日期：{{goodsObj.date}}
+                </view>
+            </view>          
+            <view class="a-item">
+                <view wx:if="{{goodsObj.state==1}}" class="input-wrap">
+                    订单状态：已接单
+                </view>
+                <view wx:if="{{goodsObj.state==0}}" class="input-wrap">
+                    订单状态：未接单
+                </view>
+            </view>  
+            <view class="line"></view>
+            <view class="b-item">
+                <view class="image">图片</view>
+                <view class="name">编号</view>
+                <view class="name">商品</view>
+                <view class="name">购买数量</view>
+            </view>   
+            <view class="b-item" wx:for="{{goodsObj.msg}}" wx:key="id">
+                <image mode="aspectFit" src="{{item.pic}}" class="image"></image>
+                <view class="name">{{item.id}}</view>
+                <view class="name">{{item.name}}</view>
+                <view class="name">{{item.num}}</view>
+            </view>              
+    </view>
+    <view class="btn-wrap">
+        <view class="btn1" bindtap="jiedan">
+        接单
+        </view>
+    </view>
+</view>
+
+<!-- 修改密码按钮 -->
+

@@ -1,0 +1,31 @@
+<scroll-view class="container" style="height: 100%;">
+    <!-- 排序框 -->
+            <view class="sort-box">
+                <view class="item {{currentSortType == 'default' ? 'active' : ''}}" bindtap="openSortFilter" id="defaultSort">
+                    <view class="txt">综合</view>
+                </view>
+                <view class="item {{currentSortType == 'id' ? 'active' : ''}}" bindtap="openSortFilter" id="idSort">
+                    <view class="txt">日期</view>
+                    <image class="icon" src="/icons/order-by.png" wx:if="{{currentSortType == 'default' || currentSortType == 'name'}}"></image>
+                    <block>
+                        <image class="icon" wx:if="{{currentSortOrder == 'asc'&&currentSortType == 'id'}}" src='/icons/asc.png'></image>
+                        <image class="icon" wx:elif="{{currentSortOrder == 'desc'&&currentSortType == 'id'}}" src='/icons/desc.png'></image>
+                    </block>
+                </view>
+            </view>
+    <!-- 搜索前 -->
+    
+
+    <view class="no-search" >        
+            <view class="goods-box" 
+            wx:for="{{goodsList}}" 
+            wx:for-index="iindex" 
+            wx:for-item="iitem" 
+            wx:key="id">
+                <view class="name">{{iitem.date}}</view>
+                <view class="name">{{iitem.content}}</view>
+                <view class="name">{{iitem.customer}}</view>
+            </view>
+        <view class='no-more' wx:if="{{!goodsList.length==0 || !searchStatus}}">没有更多了</view>   
+    </view>
+</scroll-view>

@@ -1,0 +1,87 @@
+<!--pages/assistant/assistant.wxml-->
+<scroll-view class="container" style="height: 100%;">
+    <!-- 搜索框 -->
+    <view class="search-header">
+        <view class="input-box">
+            <!-- 搜索符号 -->
+            <image class="icon-search" src="/icons/sousuo.png"></image>
+            <!-- 输入框 -->
+            <input 
+            value="{{inpValue}}" placeholder="请输入员工姓名" 
+            bindinput="handleInput"class="keywrod"/>
+            <!-- 清空输入框按钮 -->
+            <image 
+            src="/icons/delete.png" 
+            class="del" 
+            wx:if="{{isFocus}}" 
+            bindtap="clearKeyword"/>
+        </view>
+        <!-- 新增按钮 -->
+        <navigator url="/pages/assistant/newassistant" class="right">
+            <text class="iconfont icon-icon--"></text>
+        </navigator>
+    </view>
+    <!-- 排序框 -->
+            <view class="sort-box">
+                <view class="item {{currentSortType == 'default' ? 'active' : ''}}" bindtap="openSortFilter" id="defaultSort">
+                    <view class="txt">综合</view>
+                </view>
+                <view class="item {{currentSortType == 'id' ? 'active' : ''}}" bindtap="openSortFilter" id="idSort">
+                    <view class="txt">编号</view>
+                    <image class="icon" src="/icons/order-by.png" wx:if="{{currentSortType == 'default' || currentSortType == 'name'}}"></image>
+                    <block>
+                        <image class="icon" wx:if="{{currentSortOrder == 'asc'&&currentSortType == 'id'}}" src='/icons/asc.png'></image>
+                        <image class="icon" wx:elif="{{currentSortOrder == 'desc'&&currentSortType == 'id'}}" src='/icons/desc.png'></image>
+                    </block>
+                </view>
+                <view class="item" bindtap="clickme">条件筛选</view>  
+            </view>
+    <!-- 搜索前 -->
+    
+
+    <view class="no-search" >        
+            <view class="goods-box" 
+            wx:for="{{goodsList}}" 
+            wx:for-index="iindex" 
+            wx:for-item="iitem" 
+            wx:key="id">
+                <image mode="aspectFit" src="{{iitem.pics}}" class="image"></image>
+                <view class="name">{{iitem.id}}</view>
+                <view class="name">{{iitem.name}}</view>
+                <view class="name">
+                    <view wx:if="{{iitem.post==1}}">管理员</view>    
+                    <view wx:if="{{iitem.post==2}}">店长</view>    
+                    <view wx:if="{{iitem.post==3}}">店员</view>    
+                    <view wx:if="{{iitem.post==4}}">厨师</view>    
+                </view>
+                <navigator class="edit" url="/pages/assistant/assistantdetail?assistant_id={{iitem.id}}">···</navigator>
+            </view>
+        <view class='no-more' wx:if="{{!goodsList.length==0 || !searchStatus}}">没有更多了</view>   
+    </view>
+    
+    <!-- 没有搜索结果 -->
+    <view class="search-result-empty" wx:if="{{goodsList.length==0 && searchStatus}}">
+        <image class="icon" src="/icons/no-search.png"></image>
+        <text class="text">没找到，换个关键字试试</text>
+    </view>
+</scroll-view>
+
+
+ 
+<!--屏幕背景变暗的背景  -->
+  <view class="commodity_screen" bindtap="hideModal" wx:if="{{showModalStatus}}"></view>
+  <!--弹出框  -->
+  <view animation="{{animationData}}" class="commodity_attr_box" wx:if="{{showModalStatus}}">
+        <view class="btnbox">
+            <view class="btn1" bindtap="clearradiochoice">取消</view>
+            <view class="btn2" bindtap="setradiochoice">完成</view>
+        </view>                
+        <view class="bottom"></view>
+        <view class="titlepadding">借阅计划：</view>
+        <view 
+        wx:for="{{planradio}}" wx:key="id" 
+        class="checkbox {{item.checked?'checkedActive':''}}" 
+        data-id="{{index}}" bindtap='chooseplanradio'>
+            <text>{{item.name}}</text>  
+        </view>
+  </view>

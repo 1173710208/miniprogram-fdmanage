@@ -1,0 +1,43 @@
+<!-- pages/test/test.wxml -->
+<view class="container">
+    <view class="edit-container">
+        <view class="time">2019-12-13</view>
+        <view class="title">早餐</view>
+        <view class="food-container">
+            <view class="fooditem-container">
+                <view class="name">面条</view>
+                <view class="material-box">
+                    <view class="material">miantiao</view>
+                    <view class="material">miantiao</view>
+                    <view class="material">miantiao</view>
+                    <view class="material">miantiao</view>
+                    <view class="material">miantiao</view>
+                </view>
+                <view class="num-box">
+                    <view class="num">100g</view>
+                    <view class="num">100g</view>
+                    <view class="num">100g</view>
+                    <view class="num">100g</view>
+                    <view class="num">100g</view>
+                </view>
+            </view>
+            <view class="fooditem-container">
+                <view class="name">面条</view>
+                <view class="material-box">
+                    <view class="material">miantiao</view>
+                    <view class="material">miantiao</view>
+                    <view class="material">miantiao</view>
+                    <view class="material">miantiao</view>
+                    <view class="material">miantiao</view>
+                </view>
+                <view class="num-box">
+                    <view class="num">100g</view>
+                    <view class="num">100g</view>
+                    <view class="num">100g</view>
+                    <view class="num">100g</view>
+                    <view class="num">100g</view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

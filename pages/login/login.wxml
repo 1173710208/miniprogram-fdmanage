@@ -1,0 +1,30 @@
+<view class="container">
+  <view class="login-icon">
+    <image mode="widthFix" src="../../icons/login.png"></image>
+  </view>
+  <view class="login-from">
+    <!-- 账号 -->
+    <view class="inputView">
+      <image class="nameImage" src="../../icons/zhanghu.png"></image>
+      <label class="loginLab">账号 |</label>
+      <input class="inputText" placeholder="请输入账号" bindinput="usernameInput" />
+    </view>
+      <view class="line"></view>
+    <!-- 密码 -->
+    <view class="inputView">
+      <image class="keyImage" src="../../icons/mima.png"></image>
+      <label class="loginLab">密码 |</label>
+      <input class="inputText" password="true" placeholder="请输入密码" bindinput="passwordInput" />
+    </view>
+    <view class="padding"></view>
+    <view class="under"> 微信登录</view>
+       <view class="line2"></view>
+    <!-- 按钮 -->
+    <view class="loginBtnView">
+      <button class="loginBtn" type="default" size="default" loading="{{loading}}" plain="true" disabled="{{disabled}}" bindtap="login">
+        登录
+      </button>
+    </view>
+  </view>
+  <!-- <navigator url="/pages/index/index" open-type="switchTab">登录</navigator> -->
+</view>

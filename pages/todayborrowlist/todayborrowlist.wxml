@@ -1,0 +1,17 @@
+<scroll-view class="container" style="height: 100%;">
+    <view class="no-search" >        
+            <view class="goods-box" 
+            wx:for="{{goodsList}}" 
+            wx:for-index="iindex" 
+            wx:for-item="iitem" 
+            wx:key="id">
+                <view class="name">{{iitem.id}}</view>
+                <view class="name">{{iitem.date}}</view>
+                <view class="name">{{iitem.customer}}</view>
+                <navigator class="edit" url="/pages/borrowlist/borrowlistdetail?borrowlist_id={{iitem.id}}">···</navigator>
+            </view>
+        <view class='no-more' wx:if="{{!goodsList.length==0 || !searchStatus}}">没有更多了</view>   
+    </view>   
+</scroll-view>
+
+

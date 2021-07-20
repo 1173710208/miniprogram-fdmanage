@@ -1,0 +1,77 @@
+<!--pages/else/else.wxml-->
+<view class='parent-bg'> </view>
+<!-- 空白条10rpx -->
+<view class="padding10"></view>
+<!-- 会员管理 -->
+<view class="title padding10 leftpadding">
+  会员管理
+</view>
+<view class="menu">
+  <navigator
+  url="/pages/customer/customer"
+  hover-class="navigator-hover" 
+  open-type="navigate">
+    <text class="item_img_convenience iconfont icon-jieban"> 
+    </text>
+    <view class="item_name"> 
+      全部会员
+    </view>
+  </navigator>
+</view>
+
+<!-- 空白条10rpx -->
+<view class="padding10"></view>
+<!-- 商品管理 -->
+<view class="title padding10 leftpadding">
+  商品管理
+</view>
+<view class="menu">
+<navigator
+  url="/pages/goods/goods" 
+  hover-class="none" 
+  open-type="navigate">
+    <text class="item_img_convenience iconfont icon-xishuyongpin"> 
+    </text>
+    <view class="item_name">
+      全部商品
+    </view>
+  </navigator>
+</view>
+
+<!-- 空白条10rpx -->
+<view class="padding10"></view>
+<!-- 员工管理 -->
+<view class="title padding10 leftpadding">
+  员工管理
+</view>
+<view class="menu">
+<navigator
+  url="/pages/assistant/assistant" 
+  hover-class="navigator-hover" 
+  open-type="navigate">
+    <text class="item_img_convenience iconfont icon-biaodankongjianlianxiren"> 
+    </text>
+    <view class="item_name">
+      全部员工
+    </view>
+  </navigator>
+</view>
+
+<!-- 空白条10rpx -->
+<view class="padding10"></view>
+<!-- 意见反馈管理 -->
+<view class="title padding10 leftpadding">
+  意见反馈管理
+</view>
+<view class="menu">
+<navigator
+  url="/pages/feedback/feedback" 
+  hover-class="navigator-hover" 
+  open-type="navigate">
+    <text class="item_img_convenience iconfont icon-pinglun"> 
+    </text>
+    <view class="item_name">
+      全部意见
+    </view>
+  </navigator>
+</view>

@@ -1,0 +1,63 @@
+<scroll-view class="container" style="height: 100%;">
+    <!-- 排序框 -->
+            <view class="sort-box">
+                <view class="item {{currentSortType == 'default' ? 'active' : ''}}" bindtap="openSortFilter" id="defaultSort">
+                    <view class="txt">综合</view>
+                </view>
+                <view class="item {{currentSortType == 'id' ? 'active' : ''}}" bindtap="openSortFilter" id="idSort">
+                    <view class="txt">日期</view>
+                    <image class="icon" src="/icons/order-by.png" wx:if="{{currentSortType == 'default' }}"></image>
+                    <block>
+                        <image class="icon" wx:if="{{currentSortOrder == 'asc'&&currentSortType == 'id'}}" src='/icons/asc.png'></image>
+                        <image class="icon" wx:elif="{{currentSortOrder == 'desc'&&currentSortType == 'id'}}" src='/icons/desc.png'></image>
+                    </block>
+                </view>
+                <view class="item" bindtap="clickme">条件筛选</view>  
+            </view>
+    <!-- 搜索前 -->
+    
+
+    <view class="no-search" >        
+            <view class="goods-box" 
+            wx:for="{{goodsList}}" 
+            wx:for-index="iindex" 
+            wx:for-item="iitem" 
+            wx:key="id">
+                <view class="name">{{iitem.id}}</view>
+                <view class="name">{{iitem.date}}</view>
+                <view class="name">{{iitem.customer}}</view>
+                <view class="name">
+                    <view wx:if="{{iitem.state==1}}">
+                        已接单  
+                    </view>
+                    <view wx:if="{{iitem.state==0}}">
+                        未接单
+                    </view>
+                </view>
+                <navigator class="edit" url="/pages/borrowlist/borrowlistdetail?borrowlist_id={{iitem.id}}">···</navigator>
+            </view>
+        <view class='no-more' wx:if="{{!goodsList.length==0 || !searchStatus}}">没有更多了</view>   
+    </view>
+    
+    
+</scroll-view>
+
+
+ 
+<!--屏幕背景变暗的背景  -->
+  <view class="commodity_screen" bindtap="hideModal" wx:if="{{showModalStatus}}"></view>
+  <!--弹出框  -->
+  <view animation="{{animationData}}" class="commodity_attr_box" wx:if="{{showModalStatus}}">
+        <view class="btnbox">
+            <view class="btn1" bindtap="clearradiochoice">取消</view>
+            <view class="btn2" bindtap="setradiochoice">完成</view>
+        </view>        
+        <view class="padding"></view>
+        <view class="titlepadding">订单状态：</view>
+        <view 
+        wx:for="{{sexradio}}" wx:key="id" 
+        class="checkbox {{item.checked?'checkedActive':''}}" 
+        data-id="{{index}}" bindtap='choosesexradio'>
+            <text>{{item.value}}</text>  
+        </view>        
+  </view>

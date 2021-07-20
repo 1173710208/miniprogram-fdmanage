@@ -1,0 +1,108 @@
+<view class="detail_swiper">
+    <image class="image"  bindtap="ChangeImage"
+    mode="aspectFit" src="{{chooseImgs}}"/>
+</view>
+<form bindsubmit='formSubmit'>
+<view class="container">
+    <view class="edit-container">
+            <view class="a-item">
+                <view class="input-wrap">
+                    编号 | 
+                </view>
+                <view class="input-wrap2">
+                    提交后系统自动分配
+                </view>
+            </view>
+            <view class="a-item">
+                <view class="input-wrap">
+                    姓名 | 
+                </view>
+                <view class="input-wrap2">
+                    <input 
+                    name="name"
+                    cursor-spacing='80' 
+                    class='a-input' 
+                    placeholder='请输入会员姓名'>
+                    </input>                    
+                </view>
+            </view>
+             <view class="a-item">
+                <view class="input-wrap">
+                    电话 | 
+                </view>
+                <view class="input-wrap2">
+                    <input 
+                    name="phonenum"
+                    cursor-spacing='80' 
+                    class='a-input' 
+                    placeholder='请输入会员手机号'>
+                    </input>                    
+                </view>
+            </view>    
+            <view class="a-item">
+                <view class="input-wrap">
+                    密码 | 
+                </view>
+                <view class="input-wrap2">
+                    <input 
+                    name="mm"
+                    cursor-spacing='80' 
+                    class='a-input' 
+                    placeholder='请输入会员登陆密码'>
+                    </input>                    
+                </view>
+            </view>          
+            <view class="a-item">
+                <view class="input-wrap">
+                    性别 | 
+                </view>
+                <view class="input-wrap2">
+                    <picker class="input-wrap2" mode="selector" value="{{sex}}" range="{{sexrange}}" bindchange="bindsexChange">
+                        <view wx:if="{{!choosesex}}">
+                          点击选择性别
+                        </view>
+                        <view wx:else> {{sex}}</view>
+                    </picker>                  
+                </view>
+            </view>                 
+            <view class="a-item">
+                <view class="input-wrap">
+                    生日 | 
+                </view>
+                <picker class="input-wrap2" mode="date" value="{{date}}" start="1900-01-01" end="2021-06-11" bindchange="bindDateChange">
+                    <view wx:if="{{!choosebirthday}}">
+                      点击选择日期
+                    </view>
+                    <view wx:else> {{date}}</view>
+                </picker>
+            </view>       
+            <view class="a-item">
+                <view class="input-wrap">
+                    借阅计划 | 
+                </view>
+                <picker class="input-wrap2" mode="selector" value="{{plan}}" range="{{planrange}}" bindchange="bindplanChange">
+                        <view wx:if="{{!chooseplan}}">
+                          点击选择借阅计划
+                        </view>
+                        <view wx:else> {{plan}}</view>
+                    </picker>  
+            </view>                   
+            <view class="a-item">
+                <view class="input-wrap">
+                    会员到期 | 
+                </view>
+                <view class="input-wrap2">
+                    提交后系统自动分配
+                </view>
+            </view> 
+    </view>
+    <view class="btn-wrap">
+            <view class="btn">
+                提交
+            </view>
+            <button form-type='submit'>   
+            </button>
+    </view>
+</view>
+</form>
+
